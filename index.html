@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Nishka 💗</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 12px;
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+  color: #a51d59;
+  background: linear-gradient(135deg, #ffe1ed, #ffc5dd, #fff0f6);
+  overflow-x: hidden;
+}
+
+.card {
+  max-width: 520px;
+  margin: 20px auto;
+  padding: 28px 20px;
+  background: rgba(255,255,255,.92);
+  border: 2px solid #ffb4d0;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px #c94d8150;
+}
+
+.teddy {
+  font-size: 90px;
+  animation: bounce 2s infinite;
+}
+
+h1 {
+  font-size: clamp(28px, 7vw, 40px);
+  margin: 10px 0;
+}
+
+h2 { color: #e74691; }
+
+p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.letter {
+  background: #fff0f6;
+  border-radius: 20px;
+  padding: 18px;
+  margin: 20px 0;
+  line-height: 1.9;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  background: #f04b9b;
+  color: white;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #f04b9b50;
+}
+
+#surprise {
+  display: none;
+  background: #ffe6f0;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 22px;
+  pointer-events: none;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 0; }
+  15% { opacity: 1; }
+  to { transform: translateY(-110vh) rotate(25deg); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="teddy">🧸💗</div>
+  <h1>I Love You, Nishka!</h1>
+  <h2>My Babuu Bacha 🥹💕</h2>
+
+  <p>Heyyy meri jaan! 💋<br>
+  This little website is made just for you.</p>
+
+  <div class="letter">
+    <h2>💌 A Little Message For You</h2>
+    Meri pyaari Nishkaaa 🩷🥹<br><br>
+    Tu meri life ki bohot special person hai.
+    Teri smile aur teri baatein mere liye bohot precious hain. 🧸💗<br><br>
+    I hope this little surprise brings a smile to your face, meri jaan! 🫶🏻<br><br>
+    Sending you lots of love, hugs and teddy bears! 🧸💋
+  </div>
+
+  <h2>Open Your Surprise! 🎁</h2>
+  <button onclick="showSurprise()">Open My Surprise 💗</button>
+
+  <div id="surprise">
+    <div style="font-size:65px">🧸💐💗</div>
+    <h2>YOU ARE SO SPECIAL! 🥹</h2>
+    <p>I Love Youuu Nishkaaa! 💋💕<br>
+    A million pink hearts just for you! 💗💗💗</p>
+  </div>
+
+  <p style="font-size:14px">
+    Made with lots of love, just for Nishka 💗✨
+  </p>
+</div>
+
+<script>
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+
+  for (let i = 0; i < 18; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = ["💗", "💕", "💖", "🧸"][i % 4];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = Math.random() * 2 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6500);
+  }
+}
+</script>
+
+</body>
+</html>
